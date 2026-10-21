@@ -17,13 +17,13 @@
       <button id="soundBtn" class="sound-btn" aria-label="ปิดเสียง" title="ปิดเสียง">🔊</button>
     </header>
     <section class="arena-wrap">
-      <canvas id="arena" aria-label="สนามต่อสู้ ใช้ WASD หรือปุ่มลูกศรเดิน แตะหรือคลิกเพื่อยิง กดค้างเพื่อยิงรัว ปืนหันไปทางหนูที่ใกล้ที่สุด"></canvas>
+      <canvas id="arena" aria-label="สนามต่อสู้ • คอมพิวเตอร์ใช้ WASD หรือปุ่มลูกศรเดินและคลิกยิง • มือถือลากนิ้วเพื่อเคลื่อนที่และยิง"></canvas>
       <div class="hud-top"><div class="health"><span>❤️</span><div class="bar"><i id="healthBar"></i></div><b id="healthText">150</b></div><div class="wave-label" id="status">กำจัดหนูให้หมด!</div></div>
       <div class="boss-hud" id="bossHud"><div><span id="bossName">👑 ราชาหนู</span> <b id="bossHpText"></b></div><div class="bar boss-bar"><i id="bossBar"></i></div></div>
-      <div class="overlay" id="overlay"><div class="intro-card"><div class="intro-rat">🐀</div><p class="eyebrow">เมืองกำลังจะพังแล้ว!</p><h1>หนูยึดเมือง<br><em>ลุยเลย!</em></h1><p>เลือกอาวุธ แล้วแตะ/คลิกยิงได้เลย หรือกดค้างเพื่อยิงรัว ปืนเล็งหนูใกล้ที่สุดเอง</p><div class="citizen-party hidden" id="citizenParty" aria-label="ประชาชนกำลังฉลอง">🧑‍🤝‍🧑 🎊 🙌 🧹 🎉 🧑‍🤝‍🧑<span>เย้! เมืองสะอาดแล้ว ขอบคุณฮีโร่!</span></div><button class="start-btn" id="startBtn">▶ เริ่มเกม</button><small>เดินด้วย WASD / ปุ่มลูกศร • มือถือใช้ปุ่มบนจอ<br>🪂 เวฟสูงอาจเจอบอส 2–3 ตัว • ระวังบอสจักรกลยิงดาวกระจาย!</small></div></div>
+      <div class="overlay" id="overlay"><div class="intro-card"><div class="intro-rat">🐀</div><p class="eyebrow">เมืองกำลังจะพังแล้ว!</p><h1>หนูยึดเมือง<br><em>ลุยเลย!</em></h1><p>เลือกอาวุธ • มือถือ: ลากนิ้วบนสนามเพื่อเดินและยิงอัตโนมัติ • คอมพิวเตอร์: ใช้ WASD เดิน คลิกหรือกดค้างเพื่อยิง</p><div class="citizen-party hidden" id="citizenParty" aria-label="ประชาชนกำลังฉลอง">🧑‍🤝‍🧑 🎊 🙌 🧹 🎉 🧑‍🤝‍🧑<span>เย้! เมืองสะอาดแล้ว ขอบคุณฮีโร่!</span></div><button class="start-btn" id="startBtn">▶ เริ่มเกม</button><small>คอมพิวเตอร์: WASD / ปุ่มลูกศรเดิน • มือถือ: ลากนิ้วบนสนามเพื่อเดินและยิง • แตะปุ่มยิงออโต้เพื่อเปิด/ปิด<br>🪂 เวฟสูงอาจเจอบอส 2–3 ตัว • ระวังบอสจักรกลยิงดาวกระจาย!</small></div></div>
       <div class="toast" id="toast"></div>
       <div class="mobile-pad" aria-label="ปุ่มควบคุมมือถือ"><button data-move="up">▲</button><div><button data-move="left">◀</button><button data-move="down">▼</button><button data-move="right">▶</button></div></div>
-      <button class="mobile-fire" id="mobileFire">ยิง!</button>
+      <button class="mobile-fire" id="mobileFire" type="button" aria-label="เปิดหรือปิดยิงอัตโนมัติ" aria-pressed="false">ยิงออโต้: ปิด</button>
     </section>
     <section class="bottom-panel">
       <div class="weapon-head"><div><span class="eyebrow">คลังอาวุธ</span><h2>เลือกวิธีจัดการ</h2></div><span class="ammo-tip">ปืนและปืนกลยิงบอสได้ • RPG แรงสุด</span></div>
@@ -32,6 +32,6 @@
     </section>
     <footer>เมืองหนูครองเมือง! <span>เกมแอ็กชันการ์ตูน • พร้อมเผยแพร่บน GitHub Pages</span></footer>
   </main>
-  <script src="game.js"></script>
+  <script src="game.js?v=20261021-4"></script>
 </body>
 </html>
